@@ -5,8 +5,8 @@ programa
 funcao inicio()
 {
 	//ex1()
-	ex2()
-	//ex3()
+	//ex2()
+	ex3()
 	//ex4()
 	//ex5()
 	//ex6()
@@ -42,7 +42,7 @@ funcao inicio()
 //Faça um algoritmo que leia as cinco vogais e exiba na tela na ordem inversa.
 	funcao ex2()
 	{
-		caracter vCheck[]={'a', 'e','i','o','u'}
+		inteiro vCheck=0
 		caracter vogal[5]
 
 		escreva("Então você acha que conhece as vogais?\nVamos testar seus conhecimentos!\n")
@@ -53,7 +53,7 @@ funcao inicio()
 	     	leia(vogal[i])
 	     	
 	     	se(vogal[i]=='a' ou vogal[i]=='e' ou vogal[i]=='i' ou vogal[i]=='o' ou vogal[i]=='u')
-	     	{ escreva("Okay, e a próxima.\n") 
+	     	{ vCheck++
 	     		       
 	        /*  se(vogal[0]==vogal[1] ou vogal[0]==vogal[2] ou vogal[0]==vogal[3] ou vogal[0]==vogal[4]
 		     ou vogal[1]==vogal[2] ou vogal[1]==vogal[3] ou vogal[1]==vogal[4]
@@ -62,13 +62,15 @@ funcao inicio()
 			    
 			    escreva("\nOops, parece que você já digitou essa vogal.\nTente de novo.\n") pare} */
 	     	
-	     	}senao{escreva("\nOpa, esse aí não é vogal não hein.\nTente de novo.\n") pare }                 
+	     	}senao{escreva("\nOpa, esse aí não é vogal não hein.") pare }                 
 		}
+
+		se(vCheck<5){escreva("\nTente de novo.\n")}
 		
-		se(vogal[0]==vogal[1] ou vogal[0]==vogal[2] ou vogal[0]==vogal[3] ou vogal[0]==vogal[4]
+		senao se(vogal[0]==vogal[1] ou vogal[0]==vogal[2] ou vogal[0]==vogal[3] ou vogal[0]==vogal[4]
 		ou vogal[1]==vogal[2] ou vogal[1]==vogal[3] ou vogal[1]==vogal[4]
 		ou vogal[2]==vogal[3] ou vogal[2]==vogal[4]
-		ou vogal[3]==vogal[4]) { escreva("\nora ora ora parece que você repetiu ali, né amigão.\n")
+		ou vogal[3]==vogal[4]) { escreva("\nora ora ora parece que você repetiu ali, né amigão.\nTente de novo.\n")
 		
 		}senao{ escreva("\nIncrível! Você realmente conhece todas as vogais!\nAqui está o que você digitou, só que ao contrário:\n")		
 	        para(inteiro i=4; i >=0; i--)
@@ -217,10 +219,10 @@ Exibir ao final o nome do time campeão e o último colocado na pontuação. */
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2043; 
- * @DOBRAMENTO-CODIGO = [16, 78, 115, 138, 183];
+ * @POSICAO-CURSOR = 2393; 
+ * @DOBRAMENTO-CODIGO = [16, 42, 117, 140, 185];
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {vogal, 46, 11, 5}-{i, 50, 19, 1};
+ * @SIMBOLOS-INSPECIONADOS = {i, 22, 15, 1}-{i, 28, 15, 1}-{i, 34, 15, 1}-{vCheck, 45, 10, 6}-{vogal, 46, 11, 5};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
